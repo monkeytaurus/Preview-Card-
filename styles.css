@@ -14,5 +14,13 @@
 
 body{ 
     font-family: 'Nunito', sans-serif ; 
+    min-height: 100vh;   /* Makes the body have 100% of the browser height or fills the entire browser window*/
 
+    
+}
+
+
+.card-img img { 
+    width:600px; 
+    height: 500px; 
 }
