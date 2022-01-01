@@ -1,13 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
 /* Extra-light 200 */
 /* Light 300 */
 /* Regular 400 */
+/* Medium 500 */
+/* Semi-bold 600 */
 
 /* margin when you want to space out elements from other elements */
 /* padding when adjusting the appearnce of an element or wasnt to change the within an element's border */
 
 
 /* Declaring global CSS variables  */
+:root{ 
+    --dark-blue: hsl(223, 47%, 23%); 
+    --sailor-blue: #00203FFF;
+    --desaturated-blue: hsl(224, 23%, 55%);
+}
+
+
+
 
 
 *{ 
@@ -32,7 +42,7 @@ body{
     position: relative;
     right:25%;
     padding-top: 25px;
-    padding-left: 20px; 
+    padding-left: 25px; 
 }
 
 
@@ -48,30 +58,157 @@ body{
 .text-content{ 
     position: relative; 
     left:280px; 
-    bottom:300px; 
-    padding: 0 100px 0 100px; 
+    bottom:260px; 
     width:100%; 
+    text-align: left;
+    padding-left: 300px; 
+    padding-right: 320px; 
+    margin-left:20px; 
 }   
 
-
+.text-content h1{ 
+    font-size:36px; 
+    font-weight: 600;
+    color:var(--dark-blue)
+}
 
 
 .text-content p{ 
-    padding-left: 200px;
-    padding-right: 200px; 
-    color: white;
-    font-weight: 400;
+    word-break: break-all;
+    white-space: none;
+    /* color: var(--dark-blue);  */
+    /* color:whitesmoke;  */
+    color: var(--sailor-blue); 
+    font-weight: 600;
+    font-size: 23px;
+    display: block; 
+
 }
+
 
 .text-content h4{ 
     position: relative; 
-    top: 50px; 
-    right: 175px; 
+    font-weight: 600;
+    font-size: 21px;
+    top:20px; 
+}
+
+ .card{ 
+    /* background: rgb(230,110,12);
+    background: linear-gradient(0deg, rgba(230,110,12,1) 26%, rgba(3,0,255,1) 100%); */
+
+    background: url(/Conservatory_Project/Images/360_F_248448796_BbU5oGbSVPCNzDGCShRAZ3sXX2GiqKKr.jpg); 
+    background-repeat: no-repeat;
+    background-size:contain; 
+ } 
+
+ 
+ 
+ 
+ 
+ .buttons{
+     position: relative; 
+     display: flex; 
+     /* Using the flex property requries parent (or a container) element */
+     flex-direction: column;
+     bottom: 450px; 
+     left: 130px; 
+     width: 400px; 
+     justify-items: center;
+    } 
+    
+    .shortcut-links a{
+        font-size: 20px; 
+        font-weight: 600;
+        text-decoration: none; 
+        position: relative; 
+        bottom: 230px;
+        left: 145px;
+        margin-bottom: 10px;
+        /* display:flex;  */
+        flex-direction: column;
+        /* color: var(--dark-blue) */
+        /* color: whitesmoke;          */
+        color: var(--sailor-blue); 
+        justify-items: center;
+    }
+
+ .apply-btn{ 
+     display: block; 
+     text-decoration: none;  
+     border: 1px outset var(--sailor-blue); 
+     /* background-color: hsl(223, 47%, 23%); */
+     background-color: var(--sailor-blue);
+     padding-top:12px;
+     padding-bottom:12px;
+     margin-bottom: 20px;
+     color: white; 
+     font-size: 18px; 
+ }
+
+
+ .rqst-info-button{ 
+    display: block; 
+    text-decoration: none;  
+    border: 1px outset var(--sailor-blue) ; 
+    /* background-color: hsl(223, 47%, 23%); */
+    background-color: var(--sailor-blue);
+    color: black; 
+    padding-top: 12px; 
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    color: white; 
+    font-size: 18px; 
+
+ } 
+
+ .explore-btn{ 
+    display: block; 
+    text-decoration: none;  
+    border: 1px outset var(--sailor-blue); 
+    /* background-color: hsl(223, 47%, 23%); */
+    background-color: var(--sailor-blue);
+    color: black; 
+    padding-top: 12px;
+    padding-bottom: 12px; 
+    color: white; 
+    font-size: 18px; 
+
+ }
+
+
+.design-link{ 
+    display: block;
+    white-space: none ;
+}
+
+.sculpt-link{ 
+    display:block; 
+}
+
+.paint-link{ 
+    display: block; 
+}
+
+
+.design-link:hover{ 
+    text-decoration: underline; 
+}
+
+
+.sculpt-link:hover{
+    text-decoration: underline;
+}
+
+.paint-link:hover{
+    text-decoration: underline; 
+    width:100%; 
 }
 
 
 
- .card{ 
-    background: linear-gradient(red, yellow);
-
-} 
+/* 
+ .apply-btn:hover{ 
+     background-color: var(--desaturated-blue); 
+     transition: 1s ease; 
+ } */
