@@ -9,13 +9,6 @@
 /* padding when adjusting the appearnce of an element or wasnt to change the within an element's border */
 
 
-/* Declaring global CSS variables  */
-:root{ 
-    --dark-blue: hsl(223, 47%, 23%); 
-    --sailor-blue: #00203FFF;
-    --desaturated-blue: hsl(224, 23%, 55%);
-}
-
 *{ 
     margin: 0; 
     box-sizing: border-box; 
@@ -26,8 +19,9 @@
 
 body{ 
     font-family: 'Nunito', sans-serif ; 
-    min-height: 100vh;   /* Makes the body have 100% of the browser height or fills the entire browser window*/
+    /* min-height: 100vh;   Makes the body have 100% of the browser height or fills the entire browser window */
     background-color: lightcoral;
+    /* background-color: #ff7f50;  */
 }
 
 
@@ -38,31 +32,113 @@ body{
     justify-content: center;
 }
 .card{ 
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
     margin: 30px;   
     background-color: white;
- 
+    
     
  } 
 
 
 
-.teaser{ 
+.text-content{ 
     margin: 60px 45px 55px; 
 }
 
 
+span{ 
+    /* Need to give span a width and height for it to appear */
+    display: inline-block;
+    width: 50px; 
+    height: 5px;  
+    background-color: #ff7f50;
+    margin-bottom: 5px; 
+}
 
+h1{ 
+    margin-bottom: 10px; 
+    font-weight: 600; 
+    font-size: 36px; 
+}
 
-.shortcut-links{ 
-    display: flex; 
-    flex-direction: column;
+p{ 
+    font-weight: 400;
+    margin-bottom: 10px;
 }
 
 
-.imag{ 
-    /* height: 100%;  */
 
+
+
+.imag img{ 
+    vertical-align: middle; 
+    height: 510px;
+    /* width: 100%;  */
+}
+
+
+
+.shortcut-links a{ 
+    display: inline-block;  
+    text-decoration: none;
+    margin:  5px 5px;
+    color: #ff7f50; 
+    font-weight: 600;
+    position: relative; 
+
+}
+
+
+/* pseudo-element allows you style a specific part of an element */
+/* "After" keyword used to add cosmetic content to an element without having to use HTML (Acts if it were it's own element)*/
+/* Gets inserted after the CONTENT of that ELEMENT. (NOT COMING AFTER THE ACTUAL ELEMENT) Reference Inspection Tool  */
+
+.shortcut-links a::after{    
+    content: "";   /*Replaces an element with a generated value(Empty Values Acts like an empty span)  */
+    position: absolute; 
+    width: 100%; 
+    transform: scaleX(0); /*Initially Hides the Element */ 
+    height: 2px; 
+    bottom: 0; 
+    left:0; 
+    background-color: #dc143c;    ; 
+    transform-origin: bottom right; 
+    transition: transform 0.25s ease-out; 
+}
+
+
+.shortcut-links a:hover::after{ 
+    transform: scaleX(1);
+    transform-origin: bottom left; 
+}
+
+
+
+
+/* min-width:  768px browser's viewport width equal or wider than 768px (768>=)*/
+
+
+
+@media screen and (max-width: 926px) {
+    .container{ 
+        /* flex-direction: column;  */
+    }
+
+
+    .card{ 
+        flex-direction: column;
+        width: 100%; 
+    }
+  
+    
+
+
+    
+    
+    .text-content{ 
+        margin: 30px 25.2px 27.5px; 
+
+    }
 }
