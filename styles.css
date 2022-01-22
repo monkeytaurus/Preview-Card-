@@ -74,8 +74,8 @@ p{
 
 .imag img{ 
     vertical-align: middle; 
-    height: 510px;
-    /* width: 100%;  */
+    height: 506px;
+ 
 }
 
 
@@ -116,26 +116,20 @@ p{
 
 
 
+@media screen and (max-width: 924px) {
 
-/* min-width:  768px browser's viewport width equal or wider than 768px (768>=)*/
-
-
-
-@media screen and (max-width: 926px) {
-    .container{ 
-        /* flex-direction: column;  */
+    .imag img {
+        height: 410px;
+        width: 100%;
+        height: 100%; 
     }
-
 
     .card{ 
         flex-direction: column;
         width: 100%; 
+        max-width: 550px;
     }
   
-    
-
-
-    
     
     .text-content{ 
         margin: 30px 25.2px 27.5px; 
